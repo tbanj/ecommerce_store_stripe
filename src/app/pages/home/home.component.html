@@ -2,8 +2,12 @@
   class="min-h-full max-w-7xl mx-auto border-x"
   [autosize]="true"
 >
-  <mat-drawer mode="side" opened>
+  <mat-drawer mode="side" opened class="p-6">
     <div>Filters</div>
   </mat-drawer>
+  <mat-drawer-content class="p-6">
+    <!-- to insert component into another using selector name -->
+    <app-products-header></app-products-header>
+  </mat-drawer-content>
   <mat-drawer-content class="p-4"> </mat-drawer-content>
 </mat-drawer-container>
