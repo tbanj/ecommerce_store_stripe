@@ -7,7 +7,12 @@
   </mat-drawer>
   <mat-drawer-content class="p-6">
     <!-- to insert component into another using selector name -->
-    <app-products-header></app-products-header>
+    <!-- we make use of input parameter $event because the
+     onColumnsCountChange will receive input from child component-->
+    <app-products-header
+      (columnsCountChange)="onColumnsCountChange($event)"
+    ></app-products-header>
+    {{ cols }}
   </mat-drawer-content>
   <mat-drawer-content class="p-4"> </mat-drawer-content>
 </mat-drawer-container>
