@@ -3,7 +3,7 @@
   [autosize]="true"
 >
   <mat-drawer mode="side" opened class="p-6">
-    <div>Filters</div>
+    <app-filters (showCategory)="onShowCategory($event)"></app-filters>
   </mat-drawer>
   <mat-drawer-content class="p-6">
     <!-- to insert component into another using selector name -->
@@ -12,7 +12,7 @@
     <app-products-header
       (columnsCountChange)="onColumnsCountChange($event)"
     ></app-products-header>
-    {{ cols }}
+    {{ category }}
   </mat-drawer-content>
   <mat-drawer-content class="p-4"> </mat-drawer-content>
 </mat-drawer-container>
