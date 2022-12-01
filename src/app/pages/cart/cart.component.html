@@ -63,7 +63,11 @@
           <mat-icon>close</mat-icon>
         </button>
       </td>
-      <td mat-footer-cell *matFooterCellDef></td>
+      <td mat-footer-cell *matFooterCellDef>
+        <button mat-raised-button color="primary" class="float-right">
+          Proceed to Checkout
+        </button>
+      </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
