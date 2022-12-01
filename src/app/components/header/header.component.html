@@ -2,8 +2,8 @@
   <a routerLink="home">Code with Tbanj store</a>
   <button mat-icon-button [matMenuTriggerFor]="menu">
     <mat-icon
-      [matBadge]="1"
-      [matBadgeHidden]="itemsQuantity"
+      [matBadge]="itemsQuantity"
+      [matBadgeHidden]="!itemsQuantity"
       matBadgeColor="warn"
       >shopping_cart</mat-icon
     >
@@ -15,10 +15,6 @@
         <a routerLink="cart">View Cart</a>
       </div>
       <div *ngIf="cart.items.length" class="py-3">
-        <div class="flex justify-between font-light mb-2">
-          Keyboard *1
-          <span class="font-bold">{{ "150" | currency }}</span>
-        </div>
         <div
           *ngFor="let item of cart.items"
           class="flex justify-between font-light mb-2"
@@ -26,6 +22,7 @@
           {{ item.name }} * {{ item.quantity }}
           <span class="font-bold">{{ item.price | currency }}</span>
         </div>
+
         <!-- 
 
           <div class="flex justify-between font-light mb-2">
@@ -39,7 +36,10 @@
         <span class="font-bold">{{ getTotal(cart.items) | currency }}</span>
       </div>
       <div class="pt-3 flex justify-between">
-        <button class="bg-rose-600 text-white rounded-full w-9 h-9">
+        <button
+          (click)="onClearCart()"
+          class="bg-rose-600 text-white rounded-full w-9 h-9"
+        >
           <mat-icon>remove_shopping_cart</mat-icon>
         </button>
         <button

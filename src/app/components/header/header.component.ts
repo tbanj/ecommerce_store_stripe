@@ -22,7 +22,8 @@ export class HeaderComponent implements OnInit {
     .reduce((prev, current) => prev+ current,0)
   }
 
-  
+  /*  declaring parameter with private can only be use in this file
+  but if we want to access the paramater in html, we wont attach private to it */
   constructor(private _cartService: CartService) { }
 
   ngOnInit(): void {
@@ -31,5 +32,9 @@ export class HeaderComponent implements OnInit {
 
   getTotal(items: Array<CartItem>): number {
     return this._cartService.getTotal(items);
+  }
+
+  onClearCart(): void {
+    this._cartService.clearCart();
   }
 }
