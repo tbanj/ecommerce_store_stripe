@@ -8,12 +8,12 @@ import { Product } from 'src/app/models/product.model';
 export class ProductBoxComponent implements OnInit {
   @Input() fullWidthMode = false;
   product: Product | undefined = {
-    id: 1
+    id: 1,
     title: 'Snickers',
-    price: 150
+    price: 150,
     category: 'shoes',
     description: 'description',
-    image: string;
+    image: 'https://via.placeholder.com/150'
   }
   constructor() { }
 
