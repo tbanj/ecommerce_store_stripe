@@ -20,11 +20,11 @@ export class CartComponent implements OnInit {
   dataSource: Array<CartItem> = [];
   displayedColumns: Array<string>=[
     'product',
-    /* 'name',
+    'name',
     'price',
     'quantity',
     'total',
-    'action' */
+    'action'
   ]
 
   
@@ -36,4 +36,9 @@ export class CartComponent implements OnInit {
     console.log('cart', this.cart);
   }
 
+    getTotal(items: Array<CartItem>): number {
+      return items
+        .map((item)=> item.price * item.quantity)
+        .reduce((prev, current)=> prev+ current, 0)
+    }
 }
