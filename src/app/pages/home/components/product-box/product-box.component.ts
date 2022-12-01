@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from 'src/app/models/product.model';
 
 @Component({
@@ -6,6 +6,10 @@ import { Product } from 'src/app/models/product.model';
   templateUrl: './product-box.component.html'
 })
 export class ProductBoxComponent implements OnInit {
+  /* to send data from parent component, to child
+   component make use of @Output()
+   e.g <number> means it will return number data type
+  */
   @Input() fullWidthMode = false;
   product: Product | undefined = {
     id: 1,
@@ -15,12 +19,16 @@ export class ProductBoxComponent implements OnInit {
     description: 'description',
     image: 'https://via.placeholder.com/150'
   }
+
+  @Output() addToCart = new EventEmitter();
+
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onAddToCart(product: Product): void {
-
+  onAddToCart(): void {
+    this.addToCart.emit(this.product);
   }
 }
