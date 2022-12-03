@@ -55,4 +55,9 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.productSubscription.unsubscribe();
     }
   }
+
+  onItemsCountChange(newCount: number): void { 
+     this.count = newCount.toString();
+    this  this.getProducts();
+  }
 }
