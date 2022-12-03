@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Product } from '../models/product.model';
 
 
@@ -9,6 +9,7 @@ const STORE_BASE_URL = 'https://fakestoreapi.com';
   providedIn: 'root'
 })
 export class StoreService {
+  // sort = new BehaviorSubject<string>('desc');
 
   constructor(private _httpClient: HttpClient) { }
 
