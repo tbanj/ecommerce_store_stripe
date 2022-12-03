@@ -11,15 +11,15 @@ export class ProductBoxComponent implements OnInit {
    e.g <number> means it will return number data type
   */
   @Input() fullWidthMode = false;
-  product: Product | undefined = {
+  /* product: Product | undefined = {
     id: 1,
     title: 'Snickers',
     price: 150,
     category: 'shoes',
     description: 'description',
     image: 'https://via.placeholder.com/150'
-  }
-
+  } */
+  @Input() product: Product | undefined;
   @Output() addToCart = new EventEmitter();
 
 
