@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-products-header',
@@ -16,6 +17,8 @@ export class ProductsHeaderComponent implements OnInit {
   @Output() sortChange = new EventEmitter<string>();
   sort = 'desc';
   itemsShowCount = 12;
+
+  // sendSort = new BehaviorSubject<string>(this.sort);
 
   constructor() { }
 

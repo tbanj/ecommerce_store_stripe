@@ -26,7 +26,16 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.getProducts();
   }
 
+  onSortChange(newSort: string): void {
+    console.warn('onSortChange', newSort);
+    
+    this.sort = newSort;
+    this.getProducts();
+  }
+
   getProducts(): void { 
+    console.warn('getProducts', this.sort);
+    
      this.productSubscription = this._storeService.getAllProducts(this.count, this.sort)
       .subscribe((_products) => { this.products = _products; })
   }
@@ -50,14 +59,17 @@ export class HomeComponent implements OnInit, OnDestroy {
     })
   }
 
+  onItemsCountChange(newCount: number): void { 
+    this.count = newCount.toString();
+   this.getProducts();
+ }
+
+  
   ngOnDestroy(): void {
     if (this.productSubscription) {
       this.productSubscription.unsubscribe();
     }
   }
 
-  onItemsCountChange(newCount: number): void { 
-     this.count = newCount.toString();
-    this  this.getProducts();
-  }
+  
 }
