@@ -11,6 +11,7 @@
      onColumnsCountChange will receive input from child component-->
     <app-products-header
       (columnsCountChange)="onColumnsCountChange($event)"
+      (itemsCountChange)="onItemsCountChange($event)"
     ></app-products-header>
     <!-- {{ category }} -->
     <mat-grid-list gutterSize="16" [cols]="cols" [rowHeight]="rowHeight">
