@@ -81,7 +81,12 @@ export class CartComponent implements OnInit {
     }
 
     onCheckout(): void {
-      //  http://localhost:4242/checkout
+      /*  http://localhost:4242/checkout
+      https://majastoreserver.mybluemix.net
+        process.env.APP_BACKEND_API
+      */
+     console.warn('onCheckout', process.env['APP_BACKEND_API']);
+     
       this._http.post('https://majastoreserver.mybluemix.net',{
         items: this.cart.items
       }).subscribe(async (res: any) => {
