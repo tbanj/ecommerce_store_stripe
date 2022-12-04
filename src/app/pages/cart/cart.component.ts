@@ -5,6 +5,7 @@ import { CartService } from './../../services/cart.service';
 import { CartItem } from './../../models/cart.model';
 
 import { Cart } from 'src/app/models/cart.model';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-cart',
@@ -85,7 +86,7 @@ export class CartComponent implements OnInit {
       https://majastoreserver.mybluemix.net
         process.env.APP_BACKEND_API
       */
-     console.warn('onCheckout', process.env['APP_BACKEND_API']);
+     console.warn('onCheckout', environment.APP_BACKEND_API);
      
       this._http.post('https://majastoreserver.mybluemix.net',{
         items: this.cart.items
