@@ -1,0 +1,9 @@
+applications:
+  - path: .
+    memory: 128M
+    instances: 1
+    name: majastoreserver
+    host: majastoreserver
+    disk_quota: 128M
+    command: node server.js
+    buildpack: https://github.com/cloudfoundry/nodejs-buildpack
