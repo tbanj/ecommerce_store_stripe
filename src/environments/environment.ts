@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  APP_BACKEND_API: 'https://majastoreserver.mybluemix.net/'
+  APP_BACKEND_API: 'https://majastoreserver.mybluemix.net'
 };
 
 /*

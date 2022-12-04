@@ -88,7 +88,7 @@ export class CartComponent implements OnInit {
       */
      console.warn('onCheckout', environment.APP_BACKEND_API);
      
-      this._http.post(`${environment.APP_BACKEND_API}checkout`,{
+      this._http.post(`${environment.APP_BACKEND_API}/checkout`,{
         items: this.cart.items
       }).subscribe(async (res: any) => {
         let stripe = await loadStripe("pk_test_51MAzYNLKodB3e6CIAB41CDBgexdhBR0njjJqddCPhURe9DtzRjK6Pc0JzTQJ4BmKUKafEtAc69lFk3O5gJ1tGbbp00nhOqFe6l");
