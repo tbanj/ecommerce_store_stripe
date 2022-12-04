@@ -56,8 +56,8 @@ app.post('/checkout', async(req, res, next) => {
         }
            )),
            mode: 'payment',
-           success_url: "http://localhost:4242/success.html",
-           cancel_url: "http://localhost:4242/cancel.html",
+           success_url: "https://majastoreserver.mybluemix.net/success.html",
+           cancel_url: "https://majastoreserver.mybluemix.net/cancel.html",
         }); 
         res.status(200).json(session)
     } catch (error) {
