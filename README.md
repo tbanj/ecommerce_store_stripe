@@ -18,4 +18,4 @@ https://ecommerce-store-stripe-rho.vercel.app
 <img src="src/assets/readme-data/05.png" alt="Customer & Shipping Detail" width="675" height="591">&nbsp;
 <img src="src/assets/readme-data/06.png" alt="Thank You Page" width="675" height="591">&nbsp;
 
-# Author : Alabi Temitope [<img src="scrs/linkedin-icon.png">](https://www.linkedin.com/in/alabi-temitope-aa036b103/)
+# Author : Alabi Temitope [<img src="src/assets/readme-data/linkedin-icon.png">](https://www.linkedin.com/in/alabi-temitope-aa036b103/)
