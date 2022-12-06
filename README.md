@@ -1,23 +1,21 @@
-# Online local and continental dishes restaurant
+# Proof of Concept(POC) Webshop Integrated with Stripe
 
-This is a web solution which is being implemented by the principle
-of onion architecture. It is develpoed with with Angular 6 and Bootstrap 4 for the frontend
-and database is implemented with firebase.
+This is a web solution which is an ecommerce solution that can be adopted and expanded for sales of electronics and clothes of different genders. It is implemented with Angular version 14, tailwindCss, Angular Material, HTML5 and CSS3.
+
+Database is implemented with firebase.
+
+Payment module is integrated with Stripe.
+
 Live demonstrtion of the application is hosted at
-http://ng-maja-shopping-deployment.s3-website-us-east-1.amazonaws.com
-
-or
-
-https://ng-recipe-maja-36cda.firebaseapp.com/
+https://ecommerce-store-stripe-rho.vercel.app
 
 # Screenshots
 
-<img src="scrs/recipe_book.PNG" alt="Recipe Book" width="675" height="591">&nbsp;
-<img src="scrs/recipe.PNG" alt="Recipe" width="675" height="591">&nbsp;
-<img src="scrs/sign_up.PNG" alt="Sign Up Modal" width="675" height="591">&nbsp;
-<img src="scrs/login.PNG" alt="Login Modal" width="675" height="591">&nbsp;
-<img src="scrs/recipe_new.PNG" alt="New Recipe" width="675" height="591">&nbsp;
-<img src="scrs/recipe_detail.PNG" alt="Recipe Detail" width="675" height="591">&nbsp;
-<img src="scrs/recipe_edit.PNG" alt="Recipe Edit" width="675" height="591">&nbsp;
+<img src="src/assets/readme-data/01.png" alt="Landing Page" width="675" height="591">&nbsp;
+<img src="src/assets/readme-data/02.png" alt="Product Selection" width="675" height="591">&nbsp;
+<img src="src/assets/readme-data/03.png" alt="Men Top Category" width="675" height="591">&nbsp;
+<img src="src/assets/readme-data/04.png" alt="Cart" width="675" height="591">&nbsp;
+<img src="src/assets/readme-data/05.png" alt="Customer & Shipping Detail" width="675" height="591">&nbsp;
+<img src="src/assets/readme-data/06.png" alt="Thank You Page" width="675" height="591">&nbsp;
 
 # Author : Alabi Temitope [<img src="scrs/linkedin-icon.png">](https://www.linkedin.com/in/alabi-temitope-aa036b103/)
